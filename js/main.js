@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // anasayfa işlemleri
     fetchProducts()
       .then((products) => {
-        renderProducts(products, (e) => {});
+        renderProducts(products, (e) => { addToCart(e, products);});
       })
       .catch((err) => {
         console.log(`Error: ${err}`);
